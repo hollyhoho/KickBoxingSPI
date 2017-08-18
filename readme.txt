@@ -1,9 +1,10 @@
-提前安装matlan环境MCR，https://cn.mathworks.com/products/compiler/mcr.html
-选择下载R2015b(9.0) 32位
+1. Download MCR R2015b(9.0) 32bit from https://cn.mathworks.com/products/compiler/mcr.html
 
 
-硬件用串口板子。
-接线如wiring.jpeg所示。
+2. SPI board
 
 
-运行可exe文件。
+3. Connect as wiring.jpeg
+
+
+4. Run COMgui.exe
