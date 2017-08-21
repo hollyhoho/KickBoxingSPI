@@ -84,8 +84,7 @@ else                           %若有换行符，说明当前帧传输完毕
             if plot_count == plotCountTres
                 frame = frame_num(1:frame_dot-1);            
                 data = reshape(frame, edgeAdot, edgeBdot);    
-%                 bar3(data)
-%                 axis([0 edgeAdot+1 0 edgeBdot+1 0 4096])  
+
                 strike = data(1,:);
                 newFlag = ShowStrike(strikeThreshold, strike, flag, picShow);                
                 upperFlag = newFlag(1);
