@@ -13,15 +13,14 @@ global edgeBdot
 global picShow 
 
 global upperFlag
+global middleFlag
 global lowerFlag
 global left1Flag
 global left2Flag
-global left3Flag
 global right1Flag
 global right2Flag
-global right3Flag
 
-flag = [upperFlag,lowerFlag,left1Flag,left2Flag,left3Flag,right1Flag,right2Flag,right3Flag];
+flag = [upperFlag,middleFlag,lowerFlag,left1Flag,left2Flag,right1Flag,right2Flag];
 
 dataSaveFlag = false;
 strikeThreshold = 1000;
@@ -83,18 +82,18 @@ else                           %若有换行符，说明当前帧传输完毕
             plot_count = plot_count+1;
             if plot_count == plotCountTres
                 frame = frame_num(1:frame_dot-1);            
-                data = reshape(frame, edgeAdot, edgeBdot);    
+                data = reshape(frame, edgeAdot, edgeBdot)    
 
                 strike = data(1,:);
                 newFlag = ShowStrike(strikeThreshold, strike, flag, picShow);                
                 upperFlag = newFlag(1);
-                lowerFlag = newFlag(2);
-                left1Flag = newFlag(3);
-                left2Flag = newFlag(4);
-                left3Flag = newFlag(5);
+                middleFlag = newFlag(2);
+                lowerFlag = newFlag(3);
+                left1Flag = newFlag(4);
+                left2Flag = newFlag(5);
                 right1Flag = newFlag(6);
                 right2Flag = newFlag(7);
-                right3Flag = newFlag(8);
+     
                 
 %                 stem(data(1,:))
 %                 axis([0 10 0 4096])

@@ -25,54 +25,42 @@ plotdata = [];
 savefile = savefilename;
 
 global upperFlag
+global middleFlag
 global lowerFlag
 global left1Flag
 global left2Flag
-global left3Flag
 global right1Flag
 global right2Flag
-global right3Flag
+
 upperFlag = 0;
+middleFlag = 0;
 lowerFlag = 0;
 left1Flag = 0;
 left2Flag = 0;
-left3Flag = 0;
 right1Flag = 0;
 right2Flag = 0;
-right3Flag = 0;
 
 global picShow 
-picShow = cell(9,2);
-[none, ~, alpha_pic_none]  = imread('./pic/none.png');
-[upper, ~, alpha_pic_upper] = imread('./pic/upper.png');
-[lower, ~, alpha_pic_lower] = imread('./pic/lower.png');
-[left1, ~, alpha_pic_left1] = imread('./pic/left1.png');
-[left2, ~, alpha_pic_left2] = imread('./pic/left2.png');
-[left3, ~, alpha_pic_left3] = imread('./pic/left3.png');
-[right1, ~, alpha_pic_right1] = imread('./pic/right1.png');
-[right2, ~, alpha_pic_right2] = imread('./pic/right2.png');
-[right3, ~, alpha_pic_right3] = imread('./pic/right3.png');
-% [none, ~, alpha_pic_none]  = imread('none.png');
-% [upper, ~, alpha_pic_upper] = imread('upper.png');
-% [lower, ~, alpha_pic_lower] = imread('lower.png');
-% [left1, ~, alpha_pic_left1] = imread('left1.png');
-% [left2, ~, alpha_pic_left2] = imread('left2.png');
-% [left3, ~, alpha_pic_left3] = imread('left3.png');
-% [right1, ~, alpha_pic_right1] = imread('right1.png');
-% [right2, ~, alpha_pic_right2] = imread('right2.png');
-% [right3, ~, alpha_pic_right3] = imread('right3.png');
+picShow = cell(8,2);
+[none, ~, alpha_pic_none]  = imread('./pic7/none.png');
+[upper, ~, alpha_pic_upper] = imread('./pic7/upper.png');
+[middle, ~, alpha_pic_middle] = imread('./pic7/middle.png');
+[lower, ~, alpha_pic_lower] = imread('./pic7/lower.png');
+[left1, ~, alpha_pic_left1] = imread('./pic7/left1.png');
+[left2, ~, alpha_pic_left2] = imread('./pic7/left2.png');
+[right1, ~, alpha_pic_right1] = imread('./pic7/right1.png');
+[right2, ~, alpha_pic_right2] = imread('./pic7/right2.png');
 picShow{1,1} = none; picShow{1,2} = alpha_pic_none;
 picShow{2,1} = upper; picShow{2,2} = alpha_pic_upper;
-picShow{3,1} = lower; picShow{3,2} = alpha_pic_lower;
-picShow{4,1} = left1; picShow{4,2} = alpha_pic_left1;
-picShow{5,1} = left2; picShow{5,2} = alpha_pic_left2;
-picShow{6,1} = left3; picShow{6,2} = alpha_pic_left3;
+picShow{3,1} = middle; picShow{3,2} = alpha_pic_middle;
+picShow{4,1} = lower; picShow{4,2} = alpha_pic_lower;
+picShow{5,1} = left1; picShow{5,2} = alpha_pic_left1;
+picShow{6,1} = left2; picShow{6,2} = alpha_pic_left2;
 picShow{7,1} = right1; picShow{7,2} = alpha_pic_right1;
 picShow{8,1} = right2; picShow{8,2} = alpha_pic_right2;
-picShow{9,1} = right3; picShow{9,2} = alpha_pic_right3;
 ShowStrikePosition(none, alpha_pic_none)
-clear none upper lower left1 left2 left3 right1 right2 right3
-clear alpha_pic_none alpha_pic_upper alpha_pic_lower alpha_pic_left1 alpha_pic_left2 alpha_pic_left3 alpha_pic_right1 alpha_pic_right2 alpha_pic_right3
+clear none upper middle lower left1 left2 right1 right2
+clear alpha_pic_none alpha_pic_upper alpha_pic_middle alpha_pic_lower alpha_pic_left1 alpha_pic_left2 alpha_pic_right1 alpha_pic_right2
 
 com = ['COM', num2str(com_num)];
 try
