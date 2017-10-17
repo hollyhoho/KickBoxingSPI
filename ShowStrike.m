@@ -1,6 +1,7 @@
-function newFlag = ShowStrike(strikeThreshold, strike, flag, pic)
+function newFlag = ShowStrike(strikeThreshold, strike, flag)
+        global picShow
         
-        N = 5;
+        N = 3;
         
         upperFlag = flag(1);
         middleFlag = flag(2);
@@ -18,14 +19,14 @@ function newFlag = ShowStrike(strikeThreshold, strike, flag, pic)
         strikeRight1 = strike(6);
         strikeRight2 = strike(7);
         
-        picNone = pic{1,1};   alpha_pic_none   = pic{1,2};
-        picUpper = pic{2,1};  alpha_pic_upper  = pic{2,2};
-        picMiddle = pic{3,1}; alpha_pic_middle = pic{3,2};
-        picLower = pic{4,1};  alpha_pic_lower  = pic{4,2};
-        picLeft1 = pic{5,1};  alpha_pic_left1  = pic{5,2};
-        picLeft2 = pic{6,1};  alpha_pic_left2  = pic{6,2};
-        picRight1 = pic{7,1}; alpha_pic_right1 = pic{7,2};
-        picRight2 = pic{8,1}; alpha_pic_right2 = pic{8,2};
+        picNone = picShow{1,1};   alpha_pic_none   = picShow{1,2};
+        picUpper = picShow{2,1};  alpha_pic_upper  = picShow{2,2};
+        picMiddle = picShow{3,1}; alpha_pic_middle = picShow{3,2};
+        picLower = picShow{4,1};  alpha_pic_lower  = picShow{4,2};
+        picLeft1 = picShow{5,1};  alpha_pic_left1  = picShow{5,2};
+        picLeft2 = picShow{6,1};  alpha_pic_left2  = picShow{6,2};
+        picRight1 = picShow{7,1}; alpha_pic_right1 = picShow{7,2};
+        picRight2 = picShow{8,1}; alpha_pic_right2 = picShow{8,2};
 
  %%
         if upperFlag > 1

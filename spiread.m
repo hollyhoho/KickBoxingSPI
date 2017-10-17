@@ -42,22 +42,22 @@ right2Flag = 0;
 
 global picShow 
 picShow = cell(8,2);
-[none, ~, alpha_pic_none]  = imread('./pic7/none.png');
-[upper, ~, alpha_pic_upper] = imread('./pic7/upper.png');
+[none, ~, alpha_pic_none]     = imread('./pic7/none.png');
+[upper, ~, alpha_pic_upper]   = imread('./pic7/upper.png');
 [middle, ~, alpha_pic_middle] = imread('./pic7/middle.png');
-[lower, ~, alpha_pic_lower] = imread('./pic7/lower.png');
-[left1, ~, alpha_pic_left1] = imread('./pic7/left1.png');
-[left2, ~, alpha_pic_left2] = imread('./pic7/left2.png');
+[lower, ~, alpha_pic_lower]   = imread('./pic7/lower.png');
+[left1, ~, alpha_pic_left1]   = imread('./pic7/left1.png');
+[left2, ~, alpha_pic_left2]   = imread('./pic7/left2.png');
 [right1, ~, alpha_pic_right1] = imread('./pic7/right1.png');
 [right2, ~, alpha_pic_right2] = imread('./pic7/right2.png');
-picShow{1,1} = none; picShow{1,2} = alpha_pic_none;
-picShow{2,1} = upper; picShow{2,2} = alpha_pic_upper;
-picShow{3,1} = middle; picShow{3,2} = alpha_pic_middle;
-picShow{4,1} = lower; picShow{4,2} = alpha_pic_lower;
-picShow{5,1} = left1; picShow{5,2} = alpha_pic_left1;
-picShow{6,1} = left2; picShow{6,2} = alpha_pic_left2;
-picShow{7,1} = right1; picShow{7,2} = alpha_pic_right1;
-picShow{8,1} = right2; picShow{8,2} = alpha_pic_right2;
+picShow{1,1} = none;    picShow{1,2} = alpha_pic_none;
+picShow{2,1} = upper;   picShow{2,2} = alpha_pic_upper;
+picShow{3,1} = middle;  picShow{3,2} = alpha_pic_middle;
+picShow{4,1} = lower;   picShow{4,2} = alpha_pic_lower;
+picShow{5,1} = left1;   picShow{5,2} = alpha_pic_left1;
+picShow{6,1} = left2;   picShow{6,2} = alpha_pic_left2;
+picShow{7,1} = right1;  picShow{7,2} = alpha_pic_right1;
+picShow{8,1} = right2;  picShow{8,2} = alpha_pic_right2;
 ShowStrikePosition(none, alpha_pic_none)
 clear none upper middle lower left1 left2 right1 right2
 clear alpha_pic_none alpha_pic_upper alpha_pic_middle alpha_pic_lower alpha_pic_left1 alpha_pic_left2 alpha_pic_right1 alpha_pic_right2

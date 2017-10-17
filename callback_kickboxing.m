@@ -23,10 +23,10 @@ global right2Flag
 flag = [upperFlag,middleFlag,lowerFlag,left1Flag,left2Flag,right1Flag,right2Flag];
 
 dataSaveFlag = false;
-strikeThreshold = 1000;
+strikeThreshold = 1500;
 
 
-freshNumPerSec = 8; %画图时每秒刷新次数
+freshNumPerSec = 10; %画图时每秒刷新次数
 plotCountTres = floor(sampleRate/freshNumPerSec);
 
 
@@ -81,11 +81,12 @@ else                           %若有换行符，说明当前帧传输完毕
             
             plot_count = plot_count+1;
             if plot_count == plotCountTres
-                frame = frame_num(1:frame_dot-1);            
-                data = reshape(frame, edgeAdot, edgeBdot)    
-
+                frame = frame_num(1:frame_dot-1);
+                           
+                data = reshape(frame, edgeAdot, edgeBdot);    
                 strike = data(1,:);
-                newFlag = ShowStrike(strikeThreshold, strike, flag, picShow);                
+                              
+                newFlag = ShowStrike(strikeThreshold, strike, flag);                
                 upperFlag = newFlag(1);
                 middleFlag = newFlag(2);
                 lowerFlag = newFlag(3);
